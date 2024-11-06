@@ -5,12 +5,7 @@ function displayResult() {
     const name = document.getElementById('winnerName').value || "";
     const timestamp = document.getElementById('timestamp').value || "";
 
-    // Check if inputs are filled
-    // if (!name || !timestamp) {
-    //     alert("Please fill in all fields.");
-    //     return;
-    // }
-
+    
     // Format the HTML content for the pop-up window with the uploaded image as background
     const resultContent = `
         <html>
