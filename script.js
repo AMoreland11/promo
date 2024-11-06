@@ -1,4 +1,3 @@
-
 let resultWindow = null;
 
 function displayResult() {
