@@ -2,14 +2,14 @@
 let resultWindow = null;
 
 function displayResult() {
-    const name = document.getElementById('winnerName').value;
-    const timestamp = document.getElementById('timestamp').value;
+    const name = document.getElementById('winnerName').value || "";
+    const timestamp = document.getElementById('timestamp').value || "";
 
     // Check if inputs are filled
-    if (!name || !timestamp) {
-        alert("Please fill in all fields.");
-        return;
-    }
+    // if (!name || !timestamp) {
+    //     alert("Please fill in all fields.");
+    //     return;
+    // }
 
     // Format the HTML content for the pop-up window with the uploaded image as background
     const resultContent = `
@@ -31,17 +31,22 @@ function displayResult() {
                     color: white;
                     text-align: center;
                 }
-                p {
-                    font-size: 6rem;
+                p{
                     margin: 10px;
                     padding-bottom: 2rem;
+                }
+                .winner-details-name{
+                    font-size: 8rem;
+                }
+                .winner-details-timestamp{
+                    font-size: 6.5rem;
                 }
             </style>
         </head>
         <body>
             <div class="winner-details">
-                <p><strong>Winner:</strong> ${name}</p>
-                <p><strong>Time:</strong> ${new Date(timestamp).toLocaleString()}</p>
+                <p class="winner-details-name">${name}</p>
+                <p class="winner-details-timestamp">${timestamp}</p>
             </div>
         </body>
         </html>
